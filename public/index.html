@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ask the Audience</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>Ask the Audience</h1>
+    <h1>Ask the Peeps</h1>
     <section id=container>
       <section id="connection-count"></section>
       <section id="status-message"></section>
@@ -19,16 +20,19 @@
       </section>
       <section id="votes">
         <ul>
-          <li class="a-total">Total A Votes:</li>
-          <li class="b-total">Total B Votes:</li>
-          <li class="c-total">Total C Votes:</li>
-          <li class="d-total">Total D Votes:</li>
+          <li class="a-total">Total A Votes: 0</li>
+          <li class="b-total">Total B Votes: 0</li>
+          <li class="c-total">Total C Votes: 0</li>
+          <li class="d-total">Total D Votes: 0</li>
         </ul>
       </section>
-      <section id="personal-vote"></section>
+      <section id="personal-vote">
+        <h4>Your vote:</h4>
+        <p class="vote"></p>
+      </section>
     </section>
 
-    <script src="/socket.io/socket.io.js">Your Vote</script>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
   </body>
 </html>

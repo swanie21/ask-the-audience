@@ -8,6 +8,45 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  background: #F8F6F6;
+  border-bottom: 5px solid #4D12EE;
+  font-family: 'Roboto Slab', serif;
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background: #2F24C1;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  color: #F8F6F6;
+  font-size: 16px;
+  height: 30px;
+  margin: 0 5px;
+  outline: none;
+  transition: 0.5s;
+  width: 100px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+p {
+  font-size: 26px;
+  padding: 5px 0;
+}
+
 #container {
   align-items: center;
   display: flex;
@@ -29,47 +68,82 @@ body {
   margin-top: 20px;
 }
 
-h1 {
-  background: #F8F6F6;
-  border-bottom: 5px solid #4D12EE;
-  font-family: 'Roboto Slab', serif;
-  font-size: 40px;
-  padding: 20px;
-  text-align: center;
-}
-
-button {
-  background: #2F24C1;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  color: #F8F6F6;
-  font-size: 16px;
-  height: 30px;
-  margin: 0 5px;
-  width: 100px;
-}
-
-button:hover {
-  background: #5F54ED;
-  cursor: pointer;
-  outline: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
 #personal-vote {
   background: #4D12EE;
   border: 5px solid #F8F6F6;
   border-radius: 5px;
   color: #F8F6F6;
+  display: none;
+  font-size: 17px;
   position: absolute;
-  right: 10%;
+  right: 15%;
   top: 32%;
   height: 100px;
   width: 100px;
-  padding-top: 35px;
+  padding-top: 15px;
   text-align: center;
+}
+
+#votes {
+  align-items: center;
+  background: #F8F6F6;
+  border: 5px solid #4D12EE;
+  border-radius: 3px;
+  display: flex;
+  font-size: 20px;
+  height: 200px;
+  justify-content: center;
+  line-height: 40px;
+  margin-top: 50px;
+  width: 240px;
+}
+
+
+@media screen and (max-width: 770px) {
+  #personal-vote {
+    right: 12%;
+    top: 33%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  #choices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  button {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin: 10px;
+    width: 130px;
+  }
+  #connection-count {
+    margin-top: 20px;
+  }
+  #votes {
+    height: 150px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+    width: 180px;
+  }
+  #personal-vote {
+    top: 75%;
+    right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  button {
+    height: 30px;
+    margin: 6px;
+    width: 100px;
+  }
+  #personal-vote {
+    top: 80%;
+  }
 }
